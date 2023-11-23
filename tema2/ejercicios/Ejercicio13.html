@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 13</title>
+</head>
+<body>
+<p id="conteiner"></p>
+
+
+<script>
+
+
+    function cuentaAtras() {
+        let segTope = 10;
+
+        function mostrarCuentaRegresiva() {
+            document.getElementById("conteiner").innerHTML = `Va a ser redirigido en ${segTope} segundos`;
+            segTope--;
+            if (segTope === 0) {
+                //clearInterval(intervaloCuentaRegresiva);
+                window.open("http://www.iesbelen.org", "_self");
+            }
+        }
+
+        mostrarCuentaRegresiva();
+
+        setInterval(mostrarCuentaRegresiva, 1000);
+    }
+
+    cuentaAtras();
+
+
+</script>
+</body>
+</html>

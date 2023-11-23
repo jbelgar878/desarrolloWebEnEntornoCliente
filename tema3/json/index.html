@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="stylesheet" href="libreria.css">
+    <meta charset="UTF-8">
+    <title>Ejercicio 8: JSON</title>
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Author</th>
+            <th>Pages</th>
+            <th>Published</th>
+            <th>Read</th>
+            <th>Website</th>
+        </tr>
+        <tbody class="tableData">
+
+        </tbody>
+    </table>
+
+    <h3>1. Name of each of the genres.</h3>
+    <button id="show" onclick="showDiv(0)">Show</button>
+    <button id="hide" onclick="hideDiv(0)">Hide</button>
+    <p id="info"></p>
+
+    <h3>2. Title of books with more than 300 pages.</h3>
+    <button id="show" onclick="showDiv(1)">Show</button>
+    <button id="hide" onclick="hideDiv(1)">Hide</button>
+    <p id="info"></p>
+
+    <h3>3. Title of books published more than 2 years ago.</h3>
+    <button id="show" onclick="showDiv(2)">Show</button>
+    <button id="hide" onclick="hideDiv(2)">Hide</button>
+    <p id="info"></p>
+
+    <h3>4. Name of the authors and number of books they have written.</h3>
+    <button id="show" onclick="showDiv(3)">Show</button>
+    <button id="hide" onclick="hideDiv(3)">Hide</button>
+    <p id="info"></p>
+
+    <h3>5. Title of the books read, ordered by date of publishing.</h3>
+    <button id="show" onclick="showDiv(4)">Show</button>
+    <button id="hide" onclick="hideDiv(4)">Hide</button>
+    <p id="info"></p>
+
+    <script src="libreria.js"></script>
+
+</body>
+
+</html>

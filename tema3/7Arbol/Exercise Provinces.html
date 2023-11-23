@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Provinces</title>
+</head>
+<body>
+<div id="comunities">
+
+</div>
+
+<script type="module">
+
+    // import { } from './arbol.js'
+    async function getData(url) {
+        return fetch(url).then(res => res.json());
+    }
+
+    const data = await getData('arbol.json');
+
+
+    // console.log(data);
+    //
+    // let comunitiesInfo = [];
+    //
+    // for (let i = 0; i < data.length; i++) {
+    //     // console.log(data[i]);
+    //     let comunity = {
+    //         name: data[i].label,
+    //         numOfProvinces: data[i].provinces.length,
+    //     }
+    //     comunitiesInfo.push(comunity);
+    // }
+    // console.log(comunitiesInfo)
+
+
+    // let comunityNode = document.querySelector("#comunities");
+    // let stringOut = "";
+    // for (const comunity of comunitiesInfo) {
+    //     stringOut += `<details><summary>
+    //                     ${comunity.name}<br>
+    //                     ${comunity.numOfProvinces} provinces
+    //                    </summary></details>`
+    // }
+    //
+    // comunityNode.innerHTML = stringOut;
+
+    // let provincesInfo = [];
+    //
+    // for (const comunity of data) {
+    //     for (const province of comunity.provinces) {
+    //         let provinceInfo = {
+    //             name: province.label,
+    //             numOfTowns: province.towns.length,
+    //         }
+    //         provincesInfo.push(provinceInfo);
+    //     }
+    // }
+    // console.log(provincesInfo);
+    //
+    // let townsInfo = [];
+    //
+    // for (const comunity of data) {
+    //
+    //     for (const province of comunity.provinces) {
+    //         for (const town of province.towns) {
+    //             let townInfo = {name: town.label,}
+    //             townsInfo.push(townInfo);
+    //         }
+    //     }
+    //
+    // }
+    // console.log(townsInfo);
+
+
+
+let stringFinal = "";
+    for (const comunity of data) {
+        stringFinal += `<details><summary>
+                        ${comunity.label} - ${comunity.provinces.length} provinces
+                       </summary>`;
+
+        for (const province of comunity.provinces) {
+            stringFinal += `<details><summary>
+                            ${province.label} - ${province.towns.length} towns
+                            </summary>`
+            for (const town of province.towns) {
+                stringFinal += `<summary>${town.label}</summary>`
+            }
+            stringFinal +=`</details>`;
+        }
+        stringFinal +=`</details>`;
+    }
+    let comunityNode = document.querySelector("#comunities");
+    comunityNode.innerHTML = stringFinal;
+
+
+    // (async () => {
+    //     const data = await getData('arbol.json')
+    //
+    //
+    // })()
+
+
+    // fetch('arbol.json').then(response => response.json()).then(json => {
+    //
+    //     console.log(json)
+    //
+    // })
+</script>
+<!--<script type="module" src="provinces.js"></script>-->
+</body>
+</html>

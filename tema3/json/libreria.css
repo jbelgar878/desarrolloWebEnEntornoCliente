@@ -1,0 +1,23 @@
+body {
+    padding: 20px;
+}
+
+th, td {
+    border: 1px solid #6d6d6d;
+    padding: 0.2em;
+}
+
+th {
+    width: 100px;
+}
+
+#info {
+    background: rgba(135, 207, 235, 0.493);
+    width: fit-content;
+    padding: 1em;
+    display: none;
+}
+
+#hide {
+    display: none;
+}

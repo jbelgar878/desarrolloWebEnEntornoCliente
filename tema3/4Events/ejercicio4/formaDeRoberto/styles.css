@@ -1,0 +1,45 @@
+body {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 100px;
+  padding: 24px;
+  gap: 16px;
+}
+
+th,
+td {
+  border: 1px solid;
+  min-width: 100px;
+  height: 100px;
+  text-align: center;
+}
+
+.info {
+  align-self: center;
+}
+
+.gray-background {
+  background-color: #777676;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.red {
+  background-color: red;
+}

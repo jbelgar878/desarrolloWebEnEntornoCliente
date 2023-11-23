@@ -1,0 +1,12 @@
+div {
+    border: 1px solid black;
+    float: left;
+    padding: 100px;
+    margin: 20px 10px;
+}
+
+p {
+    font-size: 30px;
+    margin-left: 10px;
+    clear: both;
+}
