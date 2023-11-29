@@ -16,7 +16,7 @@ let nombres = await fetch("/tema3/jsonAnimals/animals.json")  // Nombres almacen
             return null;
         }
     )
-    /* .then() */;
+    /* .then() */; //el siguiente then() es para tratar lo que nos llega
 
 console.log(nombres.animals);
 
@@ -35,3 +35,9 @@ for (let index = 0; index < 6; index++) {
     document.getElementById("animalsNames").innerHTML += `<p>${element}</p>`
 };
 
+
+
+
+
+/* -en succesResponse si ponemos .text nos muestra el json como string
+   -para pasar string a json es con JSON.parse(successResponse <este tiene que estar anteriormente con el .text> ) */
