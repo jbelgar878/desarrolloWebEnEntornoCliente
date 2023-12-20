@@ -1,0 +1,52 @@
+/* ---------------ejercicio 1--------------- */
+
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+}
+
+th{
+    background-color: #A7F2E4;
+}
+
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+#trFila2{
+    font-weight: bold;
+}
+
+#trFila3{
+    background-color: #4f7369;
+}
+
+
+.seleccionado{
+    background-color: aquamarine;
+}
+
+
+
+
+
+
+/* ---------------ejercicio 2--------------- */
+
+
+.ej2{
+    width: 20em;
+    height: auto;
+    border: 1px solid black;
+    float: left;
+}
+
+#div1 , #div2 ,#div3{
+    height: 800px;
+    padding: 3em;
+} 
